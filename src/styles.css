@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+
+.header-body{
+    background: #0069d9 !important;
+    color: #fff;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.task-container{
+    margin: 10px;
+    height: 60vh;
+}
+
+.task-description{
+    width: 100%;
+}

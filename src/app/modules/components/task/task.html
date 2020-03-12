@@ -1,0 +1,32 @@
+<div class="custom-container">
+    <button (click)="addBucket()"> Add Bucket </button>
+    <div class="row justify-content-around" style="white-space: nowrap; overflow-x: auto;">
+        <div class="card col-md-3 task-container" *ngFor="let cont of container; index as i" style="overflow-y: auto; overflow-x: hidden;">
+            <div class="card-body">
+                <div class="row justify-content-end">
+                    <!-- <div class="col-md-11">
+                        <input type="text" name="bucket-name-{{i}}" placeholder="Bucket Name" />
+                    </div> -->
+                    <div class="col-md-1">
+                        <button (click)="addTask(i)">+</button>
+                    </div>
+                </div>
+                <div class="row" *ngFor="let list of container[i].list; index as j" style="margin-top: 15px;">
+                    <div class="col-md-4">
+                        <!-- <label>assigned to</label> -->
+                        <select name="status-{{i}}-{{j}}" [(ngModel)]="container[i].list[j].status" placeholder="status" (ngModelChange)="onStatusChanged(i , j)">
+                            <option [value]="value" selected disabled> --status-- </option>
+                            <option *ngFor="let status of statusList" [value]="status"> {{status}} </option>
+                        </select>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" name="assigned-to-{{i}}-{{j}}" [(ngModel)]="container[i].list[j].assignedTo" placeholder="assign to" />
+                    </div>
+                    <div class="col-md-12" style="margin-top: 5px;">
+                        <textarea class="task-description form-control" placeholder="decsription" name="description-{{i}}-{{j}}" [(ngModel)]="container[i].list[j].description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
