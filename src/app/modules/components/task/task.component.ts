@@ -11,6 +11,7 @@ export class Task {
     container: TaskModel[];
     list: List[];
     statusList = ["In Progress", "Not Started", "Completed"];
+    defaultStatusValue = 'no-value';
 
     constructor() {
         this.container = new Array<TaskModel>();

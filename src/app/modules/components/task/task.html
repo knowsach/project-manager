@@ -15,7 +15,7 @@
                     <div class="col-md-4">
                         <!-- <label>assigned to</label> -->
                         <select name="status-{{i}}-{{j}}" [(ngModel)]="container[i].list[j].status" placeholder="status" (ngModelChange)="onStatusChanged(i , j)">
-                            <option [value]="value" selected disabled> --status-- </option>
+                            <option [value]='defaultStatusValue' selected disabled> --status-- </option>
                             <option *ngFor="let status of statusList" [value]="status"> {{status}} </option>
                         </select>
                     </div>
