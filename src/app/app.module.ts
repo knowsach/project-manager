@@ -7,7 +7,7 @@ import { LayoutModule } from './core/layouts/layout.module';
 import { ComponentModule } from './modules/components/component.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { ChartsModule } from 'ng2-charts';
+import { ChartsModule } from 'ng2-charts';
 import { MatMenuModule } from '@angular/material/menu';
 
 
@@ -22,8 +22,8 @@ import { MatMenuModule } from '@angular/material/menu';
     ComponentModule,
     FormsModule,
     BrowserAnimationsModule,
-    // ChartsModule,
-    MatMenuModule
+    MatMenuModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
