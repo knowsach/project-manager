@@ -1,14 +1,14 @@
 <div class="custom-container">
     <button (click)="addBucket()"> Add Bucket </button>
-    <div class="row justify-content-around" style="white-space: nowrap; overflow-x: auto;">
-        <div class="card col-md-3 task-container" *ngFor="let cont of container; index as i" style="overflow-y: auto; overflow-x: hidden;">
+    <div class="row justify-content-around ticket-container" style="white-space: nowrap; overflow-x: auto;">
+        <div class="card task-container shadow" *ngFor="let cont of container; index as i" style="overflow-y: auto; overflow-x: hidden;">
             <div class="card-body">
                 <div class="row justify-content-end">
                     <!-- <div class="col-md-11">
                         <input type="text" name="bucket-name-{{i}}" placeholder="Bucket Name" />
                     </div> -->
-                    <div class="col-md-1">
-                        <button (click)="addTask(i)">+</button>
+                    <div class="col-12">
+                        <button class="w-100 rounded border add-task-btn" (click)="addTask(i)"> <strong>+</strong> </button>
                     </div>
                 </div>
                 <div class="row" *ngFor="let list of container[i].list; index as j" style="margin-top: 15px;">

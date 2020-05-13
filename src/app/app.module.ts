@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './core/layouts/layout.module';
 import { ComponentModule } from './modules/components/component.module';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { ChartsModule } from 'ng2-charts';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,10 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     LayoutModule,
     ComponentModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    // ChartsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
